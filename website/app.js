@@ -5,7 +5,7 @@ let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 // Personal API Key for OpenWeatherMap API
-let baseUri = "http://api.openweathermap.org/data/2.5/weather?units=standard&";
+let baseUri = "http://api.openweathermap.org/data/2.5/weather?units=imperial&";
 let zip = "zip=";
 const api_key = "&appid=1df432b7d28fba133d1b340e211a19ee";
 let zipCodeValue = '';
@@ -28,9 +28,9 @@ function generate_event()
          add_weather_data("http://127.0.0.1:8080/add-data",postPayload).then(function(data){
             console.log(data);
             get_recent_weather_data("http://127.0.0.1:8080/get-data").then(function(data){
-                document.getElementById('date').innerText = "Date: " + data.date;
-                document.getElementById('temp').innerText = "Temp: " + data.temp;
-                document.getElementById('content').innerText = "Feeling: " + data.feeling;
+                document.getElementById('date').innerHTML = "Date: " + data.date;
+                document.getElementById('temp').innerHTML = "Temp: " + data.temp;
+                document.getElementById('content').innerHTML = "Feeling: " + data.feeling;
             });
          });
      });
