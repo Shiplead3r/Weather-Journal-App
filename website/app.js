@@ -5,9 +5,9 @@ let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 // Personal API Key for OpenWeatherMap API
-let baseUri = "http://api.openweathermap.org/data/2.5/weather?";
+let baseUri = "http://api.openweathermap.org/data/2.5/weather?units=standard&";
 let zip = "zip=";
-let api_key = "&appid=1df432b7d28fba133d1b340e211a19ee";
+const api_key = "&appid=1df432b7d28fba133d1b340e211a19ee";
 let zipCodeValue = '';
 let feeling = '';
 let fullApiUrl = '';
